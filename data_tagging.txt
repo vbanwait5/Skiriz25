@@ -1,0 +1,12 @@
+Fields we need for each poster:
+
+  - event title
+  - .png of the poster photo
+  - day
+  - time
+    - recurring event or no
+    - if it is active right now, or if the event already passed
+  - place
+  - organizer/club
+  - other misc tags, like SCS, dietrich, tepper, etc.
+  
