@@ -62,26 +62,7 @@
               src="/static/portal_images/{{image.id}}.jpg"
               alt="{{image.title}}"
             />
-            <div class="overlay1"><button class="image-save">Save</button></div>
-            <div class="overlay2">
-              <button
-                class="image-share"
-                onclick="window.open(
-                                'https://twitter.com/intent/tweet?text=Check out the event at CMU Bulletin Board on {{image.title}} at &url=+{{request.url}}/view/{{image.id}}', 
-                                'twitter-share-dialog', 
-                                'width=626,height=436'); 
-                                return false;"
-              >
-                <img width="40%" src="/static/img/upload-icon.png" />
-              </button>
-            </div>
-            <div class="overlay3">
-              <form method="GET" action="{{ image.links }}">
-                <button class="image-link">Link</button>
-              </form>
-            </div>
           </div>
-
           <div class="card-body">
             <a
               class="card-link"
