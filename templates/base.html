@@ -107,7 +107,7 @@
 
     /* Container needed to position the overlay. Adjust the width as needed */
     .image-container {
-      position: relative;
+      	position: relative;
     }
 
 	.thefront{
@@ -120,13 +120,22 @@
 
 	.theback{
 		position: absolute;
+		display: flex;
 		top: 0;
     	left: 0;
+		height:100%;
 		backface-visibility: hidden;
 		overflow: hidden;
 		transform: rotateY(180deg);
+		justify-content: center; /* Centers horizontally */
+      	align-items: center; /* Centers vertically */
+		text-align: center; /* Ensures text alignment */
 	  }
 
+	.center-text {
+		height:100%;
+		text-align: center; /* Ensures text alignment */
+	}
     /* The overlay effect - lays on top of the container and over the image */
 
     /* overlay - 1 */
