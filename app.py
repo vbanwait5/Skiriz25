@@ -16,7 +16,7 @@ from datetime import datetime
 
 # Flask app configs
 app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user-data.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user-data6.sqlite3'
 app.secret_key = 'soverysecret'
 
 #Database 
