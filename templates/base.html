@@ -26,6 +26,9 @@
     body {
       padding-top: 100px;
     }
+    h1 {
+      font-family: Source Serif Pro;
+    }
     .card-img {
       max-width: 400%;
     }
@@ -75,14 +78,13 @@
   	opacity: 0.9; /* Adjust opacity as needed */
   	z-index: -1; /* Position it behind the search input and any other content */
 	}
-
-    .card-pin{
-			border: 3px solid grey; 
-    		border-radius: 25px;   /* border of cards*/
-		}
-	.card-img{
-			border-radius: 25px;
-		}
+    .card-pin {
+      border: 3px solid grey;
+      border-radius: 25px; /* border of cards*/
+    }
+    .card-img {
+      border-radius: 25px;
+    }
 
     .card-img:hover {
       cursor: zoom-in;
@@ -101,7 +103,6 @@
     .image-container {
       position: relative;
     }
-
 
     /* The overlay effect - lays on top of the container and over the image */
 
@@ -137,6 +138,11 @@
     }
     .image-container:hover .overlay2 {
       opacity: 1;
+    }
+    .nav-link,
+    .dropdown-item,
+    #navbarsExplore li a {
+      font-family: "Open Sans", sans-serif;
     }
 
     /* overlay - 3 */
@@ -188,6 +194,13 @@
     }
 
     p {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+        "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3",
+        "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+    .card-title {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
         "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3",
@@ -303,11 +316,13 @@
         </button>
         <!-- Links-->
         <div class="collapse navbar-collapse" id="navbarsDefault">
-          <ul class="navbar-nav nav-fill w-100">
+          <ul class="navbar-nav nav-fill w-100" font="Open Sans Regular">
             <li class="nav-item">
               <a
                 class="nav-link active"
-                href="{{ url_for('index', category='All') }}" style="color: white;"
+                href="{{ url_for('index', category='All') }}"
+                style="color: white"
+                font-family="Open Sans Regular"
                 >Home</a
               >
             </li>
