@@ -79,7 +79,15 @@
     .card-pin{
 			border: 3px solid grey; 
     		border-radius: 25px;   /* border of cards*/
+			transition: all 0.8s ease;
+			position: relative;
+			transform-style: preserve-3d;
 		}
+
+	.card-pin:hover{
+			transform: rotateY(180deg);
+		  }
+	
 	.card-img{
 			border-radius: 25px;
 		}
@@ -102,6 +110,22 @@
       position: relative;
     }
 
+	.thefront{
+		position: relative;
+		top: 0;
+    	left: 0;
+		backface-visibility: hidden;
+		overflow: hidden;
+	  }
+
+	.theback{
+		position: absolute;
+		top: 0;
+    	left: 0;
+		backface-visibility: hidden;
+		overflow: hidden;
+		transform: rotateY(180deg);
+	  }
 
     /* The overlay effect - lays on top of the container and over the image */
 
