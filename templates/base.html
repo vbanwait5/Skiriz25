@@ -280,7 +280,7 @@
 							<a class="nav-link active" href="{{ url_for('index', category='All') }}">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="{{ url_for('exclusive') }}">Today</a>
+							<a class="nav-link" href="{{ url_for('exclusive') }}">What's Poppin</a>
 						</li>
 						<li class="nav-item">
 							<input type="text" onkeyup="myFunction()" class="form-control font-weight-bold" id="search-input" placeholder="Search" autocomplete="off">
@@ -315,14 +315,11 @@
 			<!-- Seacrch Options-->	
 			<button class="btn btn-secondary" id="close-btn" onclick="myFunction2()" hidden>Close</button>
 			<ul id="myUL" hidden>
-				<li><a href="{{ url_for('index', category='Motorcade') }}">Cars</a></li>
-				<li><a href="{{ url_for('index', category='Travel') }}">Destinations</a></li>
-				<li><a href="{{ url_for('index', category='Travel') }}">Travel Destinations</a></li>
-				<li><a href="{{ url_for('index', category='Home') }}">Home Decor</a></li>
-				<li><a href="{{ url_for('index', category='Home') }}">Interior</a></li>
-				<li><a href="{{ url_for('index', category='Science') }}">Science Illustrations</a></li>
-				<li><a href="{{ url_for('index', category='Food') }}">Foods around the World</a></li>
-				<li><a href="{{ url_for('index', category='Cooking') }}">Cooking Recipes</a></li>
+				<li><a href="{{ url_for('index', category='Motorcade') }}">Educational</a></li>
+				<li><a href="{{ url_for('index', category='Travel') }}">Sports</a></li>
+				<li><a href="{{ url_for('index', category='Home') }}">Wellness</a></li>
+				<li><a href="{{ url_for('index', category='Science') }}">Club Events</a></li>
+				<li><a href="{{ url_for('index', category='Food') }}">Misc</a></li>
 			</ul>
 		</center>
 	
@@ -341,7 +338,7 @@
 	<!-- Footer -->
 	<footer class="text-muted">
 		<div class="container-fluid text-center">
-			<p>Copyright @Skiriz at Tartanhacks {{year}}</p>
+			<p>Skiriz @ Tartanhacks {{2025}}</p>
 		</div>
 	</footer>
 
