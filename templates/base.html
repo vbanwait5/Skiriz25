@@ -79,14 +79,21 @@
   	z-index: -1; /* Position it behind the search input and any other content */
 	}
 
-	.card-img {
-      border-radius: 24px;
-    }
-    .card-pin {
-      border: 3px solid grey;
-      border-radius: 25px; /* border of cards*/
-    }
-    
+    .card-pin{
+			border: 3px solid grey; 
+    		border-radius: 25px;   /* border of cards*/
+			transition: all 0.8s ease;
+			position: relative;
+			transform-style: preserve-3d;
+		}
+
+	.card-pin:hover{
+			transform: rotateY(180deg);
+		  }
+	
+	.card-img{
+			border-radius: 25px;
+		}
 
     .card-img:hover {
       cursor: zoom-in;
@@ -103,9 +110,35 @@
 
     /* Container needed to position the overlay. Adjust the width as needed */
     .image-container {
-      position: relative;
+      	position: relative;
     }
 
+	.thefront{
+		position: relative;
+		top: 0;
+    	left: 0;
+		backface-visibility: hidden;
+		overflow: hidden;
+	  }
+
+	.theback{
+		position: absolute;
+		display: flex;
+		top: 0;
+    	left: 0;
+		height:100%;
+		backface-visibility: hidden;
+		overflow: hidden;
+		transform: rotateY(180deg);
+		justify-content: center; /* Centers horizontally */
+      	align-items: center; /* Centers vertically */
+		text-align: center; /* Ensures text alignment */
+	  }
+
+	.center-text {
+		height:100%;
+		text-align: center; /* Ensures text alignment */
+	}
     /* The overlay effect - lays on top of the container and over the image */
 
     /* overlay - 1 */

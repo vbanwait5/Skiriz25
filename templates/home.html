@@ -1,6 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 
 <section class="mt-4 mb-5">
+  <!--
+  Navbar
+  -->
   <div class="container-fluid mb-4">
     <h1 class="font-weight-bold title">CMU Bulletin Board <3</h1>
     <div class="row">
@@ -51,24 +54,32 @@
       </nav>
     </div>
   </div>
+  <!--
+  Cards
+  -->
   <div class="container-fluid mb-5">
     <div class="row">
       <div class="card-columns">
-        {% for image in images_list %}
+        {% for image in images_list %} <!--creates a card for each image-->
         <div class="card card-pin">
-          <div class="image-container">
-            <img
-              class="card-img image"
-              src="/static/portal_images/{{image.id}}.jpg"
-              alt="{{image.title}}"
-            />
+          <div class="thefront">
+            <div class="image-container">
+              <img
+                class="card-img image"
+                src="/static/portal_images/{{image.id}}.jpg"
+                alt="{{image.title}}"
+              />
+            </div>
+            <div class="card-body">
+              <a
+                class="card-link"
+                href="{{ url_for('view_photo',photo_id=image.id) }}"
+                ><h5 class="card-title title">{{ image.title }}</h5></a
+              >
+            </div>
           </div>
-          <div class="card-body">
-            <a
-              class="card-link"
-              href="{{ url_for('view_photo',photo_id=image.id) }}"
-              ><h5 class="card-title title">{{ image.title }}</h5></a
-            >
+          <div class="theback">
+            <p>{{ image.description }}</p>
           </div>
         </div>
         {% endfor %}
