@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+sklearn = "*"
+scikit-learn = "*"
+pillow = "*"
+gunicorn = "*"
+flask-sqlalchemy = "*"
+pandas = "*"
+numpy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
