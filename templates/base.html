@@ -63,6 +63,18 @@
     .navbar {
       padding: 0.5rem 2rem;
     }
+	.navbar::before {
+  	content: "";
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	background: url('/static/img/cmuplaid.webp') no-repeat center center;
+  	background-size: cover; /* Make sure the image covers the container */
+  	opacity: 0.8; /* Adjust opacity as needed */
+  	z-index: -1; /* Position it behind the search input and any other content */
+	}
 
     .card-pin{
 			border: 3px solid grey; 
@@ -321,12 +333,12 @@
             <li class="nav-item">
               <a
                 class="nav-link active"
-                href="{{ url_for('index', category='All') }}"
+                href="{{ url_for('index', category='All') }}" style="color: white;"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('exclusive') }}"
+              <a class="nav-link" href="{{ url_for('exclusive') }}" style="color: white;"
                 >What's Poppin</a
               >
             </li>
